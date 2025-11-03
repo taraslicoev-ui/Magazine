@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Inter";
-  src: url('Magazine/fonts/Inter-Regular.woff2') format("woff2");
+  src: url('./fonts/Inter-Regular.woff2') format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Inter";
-  src: url('Magazine/fonts/Inter-Medium.woff2') format("woff2");
+  src: url('./fonts/Inter-Medium.woff2') format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -54,10 +54,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: var(--color-grey);
-}
-
 a,
 body,
 input,
@@ -89,7 +85,6 @@ p:not([class]):not(:last-child) {
   font-size: 20px;
 }
 
-
 .header-wrap {
   display: flex;
   justify-content: space-between;
@@ -105,9 +100,8 @@ p:not([class]):not(:last-child) {
   text-transform: uppercase;
 }
 
-
 .header-logo::before {
-  content: ' ';
+  content: '';
   width: 25px;
   height: 28px;
   background: currentColor;
@@ -117,7 +111,7 @@ p:not([class]):not(:last-child) {
 .header-menu-list {
   display: flex;
   column-gap: 35px;
-  font-size: 8px;
+  font-size: 16px;
 }
 
 .header-menu-link {
@@ -139,7 +133,7 @@ p:not([class]):not(:last-child) {
 .header-menu-link.is-current::after {
   content: '';
   position: absolute;
-  bottom: 2px;
+  bottom: 22px;
   height: 1px;
   width: 100%;
   background-color: var(--headerMenuListItemColor);
@@ -149,61 +143,17 @@ p:not([class]):not(:last-child) {
   --headerMenuListItemColor: var(--color-grey);
 }
 
+.header-info {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  text-transform: uppercase;
+}
+
 .header-info::after {
-  content: ' ';
+  content: '';
   width: 26px;
   aspect-ratio: 1;
   border-radius: 50%;
   background-color: var(--color-dark);
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .header{
-
-    /*padding-inline: min(47px) max(94px);*/
-    margin-inline: 15px;
-  }
-
-}
-
-@media screen and (max-width: 768px) {
-
-  .header{
-    flex-wrap: wrap;
-    margin-inline: 15px;
-    justify-content: space-between;
-    /*margin-inline: 15px;*/
-    /*border-bottom: none;*/
-  }
-
-  .header-menu-list {
-    column-gap: 15px;
-  }
-
-  .header-logo.is-current {
-    order: -3;
-  }
-
-  .header-menu {
-    order: -2;
-  }
-
-  .header-actions {
-    order: -1;
-  }
-}
-
-@media screen and (max-width: 612px) {
-
-  .header-logo {
-    order: -2;
-  }
-
-  .header-menu {
-    order: 1;
-  }
-
-  .header-actions {
-    order: -1;
-  }
 }
