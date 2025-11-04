@@ -157,3 +157,69 @@ p:not([class]):not(:last-child) {
   border-radius: 50%;
   background-color: var(--color-dark);
 }
+
+@media screen and (max-width: 1024px) {
+
+  .header-wrap {
+    column-gap: 36px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .header {
+    padding-inline: 15px;
+  }
+
+  .header-wrap {
+    flex-wrap: wrap;
+  }
+
+  .header-logo {
+    order: -2;
+  }
+
+  .header-info {
+    order: -1;
+  }
+
+  .header-menu {
+    order: 1;
+    width: 100%;
+  }
+
+  .header-menu-list {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .header-menu-link {
+    height: 45px;
+  }
+
+  .header-menu-link.is-current::after {
+    bottom: 12px;
+  }
+}
+
+@media screen and (max-width: 512px) {
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+  }
+
+  .header-menu-list {
+    column-gap: 10px;
+    font-size: 14px;
+  }
+
+  .header-menu-link {
+    height: 30px;
+  }
+
+  .header-menu-link.is-current::after {
+    bottom: 6px;
+  }
+}
