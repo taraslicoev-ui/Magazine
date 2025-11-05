@@ -45,11 +45,11 @@ body {
 }
 
 .button {
-  width: 62px;
-  height: 20px;
   font-size: 11px;
   font-weight: 500;
+  text-transform: uppercase;
   letter-spacing: 1.1px;
+  padding: 4px 8px;
   background-color: var(--color-light);
   border: var(--border);
   border-radius: 55px;
@@ -57,6 +57,11 @@ body {
 
 .button:hover {
   background-color: var(--color-grey);
+}
+
+.button:active {
+  color: var(--color-light);
+  background-color: var(--color-dark);
 }
 
 h1, h2, h3, h4, h5, h6 {
