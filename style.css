@@ -28,7 +28,7 @@
 
 body {
   font-family: var(--font-family-base);
-  font-size: 22px;
+  font-size: clamp(14px, 1.14vw, 22px);
   line-height: 1.36;
   color: var(--color-dark);
   background-color: var(--color-light);
@@ -46,7 +46,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 1.1px;
   padding: 1px 6px;
-  background-color: var(--color-light);
+  background-color: transparent;
   border: var(--border);
   border-radius: 55px;
 }
@@ -175,7 +175,7 @@ p:not([class]):not(:last-child) {
   display: flex;
   justify-content: space-between;
   gap: 100px;
-  min-height: 786px;
+  max-height: 786px;
   margin-bottom: 100px;
   padding-bottom: 38px;
   border-bottom: var(--border);
@@ -212,16 +212,24 @@ p:not([class]):not(:last-child) {
   padding-bottom: 18px;
   border-bottom: var(--border);
   line-height: 1.1;
-  font-size: 77px;
+  font-size: clamp(45px, 4.01vw, 77px);
 }
 
 .jenny-art-description {
-  width: 480px;
+  max-width: 480px;
 }
 
 @media screen and (max-width: 1024px) {
   .header-wrap {
     column-gap: 36px;
+  }
+
+  .jenny-art {
+    padding-bottom: 18px;
+  }
+
+  .jenny-art-title {
+    padding-bottom: 10px;
   }
 }
 
@@ -257,6 +265,22 @@ p:not([class]):not(:last-child) {
   .header-menu-link.is-current::after {
     bottom: 15px;
   }
+
+  .jenny-art {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 20px;
+    justify-items: center;
+  }
+
+  .jenny-art-info {
+    display: grid;
+    row-gap: 10px;
+  }
+
+  .jenny-art-title {
+    max-width: 372px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -275,5 +299,9 @@ p:not([class]):not(:last-child) {
 
   .header-menu-link.is-current::after {
     bottom: 8px;
+  }
+
+  .jenny-art-image {
+    max-width: 68%;
   }
 }
