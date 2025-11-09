@@ -28,7 +28,7 @@
 
 body {
   font-family: var(--font-family-base);
-  font-size: clamp(22px, 1.14vw, 22px);
+  font-size: 22px;
   line-height: 1.36;
   color: var(--color-dark);
   background-color: var(--color-light);
@@ -46,7 +46,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 1.1px;
   padding: 1px 6px;
-  background-color: transparent;
+  background-color: var(--color-light);
   border: var(--border);
   border-radius: 55px;
 }
@@ -174,9 +174,8 @@ p:not([class]):not(:last-child) {
 .jenny-art {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
   gap: 100px;
-  max-height: 822px;
+  min-height: min(40.93vw, 786px);
   margin-bottom: 100px;
   padding-bottom: 38px;
   border-bottom: var(--border);
@@ -200,7 +199,7 @@ p:not([class]):not(:last-child) {
   align-items: center;
   column-gap: 8px;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: clamp(10px, 0.62vw, 12px);
 }
 
 .jenny-art-actions {
@@ -213,31 +212,17 @@ p:not([class]):not(:last-child) {
   padding-bottom: 18px;
   border-bottom: var(--border);
   line-height: 1.1;
-  font-size: clamp(45px, 4.01vw, 77px);
+  font-size: min(4.01vw, 77px);
 }
 
 .jenny-art-description {
-  max-width: 480px;
-}
-
-.jenny-art-img-container {
-  max-width: 100%;
-  height: auto;
-  max-height: 70vh;
-  object-fit: contain
+  font-size: clamp(12px, 1.14vw, 22px);
+  width: clamp(274px, 25vw, 480px);
 }
 
 @media screen and (max-width: 1024px) {
   .header-wrap {
     column-gap: 36px;
-  }
-
-  .jenny-art {
-    padding-bottom: 18px;
-  }
-
-  .jenny-art-title {
-    padding-bottom: 10px;
   }
 }
 
@@ -274,21 +259,19 @@ p:not([class]):not(:last-child) {
     bottom: 15px;
   }
 
-  .jenny-art {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-  }
-
-  .jenny-art-info {
-    gap: 20px;
-    min-height: 356px;
-  }
-
   .jenny-art-title {
-    max-width: 370px;
+    text-align: center;
+    padding-bottom: 4px;
   }
+
+  .jenny-art {
+    padding-bottom: 8px;
+  }
+
+  .jenny-art-date {
+    width: 114px;
+  }
+
 }
 
 @media screen and (max-width: 576px) {
@@ -307,22 +290,5 @@ p:not([class]):not(:last-child) {
 
   .header-menu-link.is-current::after {
     bottom: 8px;
-  }
-
-  .jenny-art {
-    justify-items: center;
-  }
-
-  .jenny-art-header {
-    column-gap: 2px;
-    text-align: center;
-  }
-
-  .jenny-art-inner {
-    text-align: center;
-  }
-
-  .jenny-art-info {
-    gap: 3px;
   }
 }
