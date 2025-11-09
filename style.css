@@ -291,4 +291,25 @@ p:not([class]):not(:last-child) {
   .header-menu-link.is-current::after {
     bottom: 8px;
   }
+
+  .jenny-art {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .jenny-art-inner {
+    row-gap: 4px;
+  }
+
+  .jenny-art-header {
+    justify-content: space-around;
+  }
+
+  .jenny-art-date {
+    width: 168px;
+  }
+
+  .jenny-art-description {
+    width: 100%;
+  }
 }
