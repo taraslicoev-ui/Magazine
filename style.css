@@ -236,6 +236,15 @@ p:not([class]):not(:last-child) {
   font-weight: 500;
 }
 
+.btn-category:active {
+  background-color: var(--color-dark);
+}
+
+.btn-category:focus-visible {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
 .circle-btn {
   display: flex;
   align-items: center;
@@ -297,12 +306,21 @@ p:not([class]):not(:last-child) {
 }
 
 .page-content {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   column-gap: 40px;
   max-height: 1986px;
-  padding-inline: 20px;
+}
+
+.page-content::after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-dark);
 }
 
 .content-tiles-left {
@@ -325,13 +343,30 @@ p:not([class]):not(:last-child) {
   display: flex;
   align-items: center;
   column-gap: 8px;
+  font-size: 12px;
   height: 30px;
   margin-bottom: 8px;
 }
 
 .post-title {
+  position: relative;
+  display: flex;
+  align-items: center;
   margin-bottom: 80px;
   font-size: clamp(20px, 1.92, 37px);
+}
+
+.post-title::after {
+  content: '';
+  position: absolute;
+  bottom: 1px;
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-dark);
+}
+
+.string {
+  max-width: 69%;
 }
 
 @media screen and (max-width: 1024px) {
