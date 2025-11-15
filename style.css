@@ -280,7 +280,7 @@ p:not([class]):not(:last-child) {
   height: 60px;
 }
 
-.cont {
+.filter-content {
   display: flex;
   align-items: center;
 }
