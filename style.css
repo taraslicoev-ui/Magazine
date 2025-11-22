@@ -404,6 +404,12 @@ p:not([class]):not(:last-child) {
   max-width: 544px;
 }
 
+.popular-menu {
+  row-gap: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
 .popular-title-list {
   font-size: clamp(16px, 1.2vw, 24px);
 }
