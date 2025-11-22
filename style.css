@@ -22,7 +22,7 @@
   --border: 1px solid var(--color-dark);
   --font-family-base: "Inter", sans-serif;
   --container-width: 1732px;
-  --container-padding-x: 15px;
+  --container-padding-x: 20px;
   --transition-duration: 0.2s;
 }
 
@@ -66,13 +66,14 @@ body {
   border-radius: 55px;
 }
 
+
 .button-filter:hover {
   background-color: var(--color-grey);
   color: var(--color-light);
   border: 1px solid var(--color-grey);
 }
 
-.button-filter:active, .button-filter:focus-visible {
+.button-filter-dark, .button-filter:active, .button-filter:focus-visible {
   background-color: var(--color-dark);
   color: var(--color-light);
 }
@@ -205,7 +206,7 @@ p:not([class]):not(:last-child) {
 .jenny-art-body {
   display: flex;
   justify-content: space-between;
-  column-gap: 100px;
+  column-gap: 45px;
   padding-bottom: 38px;
   border-bottom: var(--border);
 }
@@ -348,6 +349,72 @@ p:not([class]):not(:last-child) {
   padding-bottom: 5px;
 }
 
+.popular {
+  display: flex;
+  column-gap: 38px;
+}
+
+.popular-posts-content {
+  display: flex;
+}
+
+.popular-posts-list {
+  display: flex;
+  column-gap: 40px;
+}
+
+.link-popular {
+  margin-bottom: 140px;
+}
+
+.popular-title {
+  max-width: 544px;
+}
+
+.popular-title-list {
+  font-size: clamp(16px, 1.2vw, 24px);
+}
+
+.popular-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 34px;
+  max-width: 274px;
+}
+
+.latest-posts-heading-popular {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  font-size: 20px;
+  letter-spacing: -0.36px;
+  margin-bottom: 38px;
+}
+
+.latest-posts-heading-popular::before {
+  content: '';
+  width: 18px;
+  height: 19px;
+  background: currentColor;
+  clip-path: polygon(0 28%, 50% 0, 100% 28%, 100% 72%, 50% 100%, 0 72%);
+}
+
+.latest-posts-heading-trading {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  font-size: 20px;
+  letter-spacing: -0.36px;
+}
+
+.latest-posts-heading-trading::before {
+  content: '';
+  width: 16px;
+  height: 19px;
+  background: currentColor;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
 @media screen and (max-width: 1024px) {
   .header-wrap {
     column-gap: 36px;
@@ -366,16 +433,16 @@ p:not([class]):not(:last-child) {
   }
 
   .latest-posts-content {
-    column-gap: 10px;
+    column-gap: 20px;
     padding-bottom: 40px;
   }
 
   .latest-posts-list {
-    row-gap: 20px;
+    row-gap: 40px;
   }
 
   .latest-posts-list-short {
-    row-gap: 10px;
+    row-gap: 32px;
   }
 
   .latest-posts-date {
@@ -383,6 +450,8 @@ p:not([class]):not(:last-child) {
     margin-bottom: 2px;
   }
 }
+
+
 
 @media screen and (max-width: 768px) {
   .header {
@@ -440,7 +509,7 @@ p:not([class]):not(:last-child) {
   }
 
   .jenny-art-img-container {
-    width: 50%;
+    width: 57%;
     margin-inline: auto;
   }
 
@@ -451,11 +520,12 @@ p:not([class]):not(:last-child) {
   }
 
   .latest-posts-list {
-    row-gap: 0;
+    max-width: 402px;
+    margin: auto;
   }
 
-  .latest-posts-list {
-    row-gap: 0;
+  .latest-posts-content, .latest-posts-list, .latest-posts-list-short {
+    row-gap: 16px;
   }
 
   .latest-posts-link-title {
@@ -499,24 +569,20 @@ p:not([class]):not(:last-child) {
   }
 
   .jenny-art-header, .jenny-art-actions  {
-    column-gap: 4px;
+    column-gap: 10px;
   }
 
   .latest-posts {
-    row-gap: 4px;
-  }
-
-  .latest-posts-content {
-    padding-left: 10px;
+    row-gap: 10px;
   }
 
   .latest-posts-category {
     flex-wrap: wrap;
-    column-gap: 4px;
+    row-gap: 6px;
     justify-content: space-around;
   }
 
-  .latest-posts-actions {
+  .latest-posts-category, .latest-posts-actions {
     column-gap: 4px;
   }
 }
