@@ -405,7 +405,7 @@ p:not([class]):not(:last-child) {
 }
 
 .popular-menu {
-  row-gap: 14px;
+  row-gap: 12px;
   display: flex;
   flex-direction: column;
 }
