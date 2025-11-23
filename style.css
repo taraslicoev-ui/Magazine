@@ -121,14 +121,7 @@ p:not([class]):not(:last-child) {
   margin-bottom: 12px;
 }
 
-.section-header-date-popular {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  margin-bottom: 12px;
-}
-
-.section-header-text, .section-header-date, .section-header-date-popular {
+.section-header-text, .section-header-date {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 500;
@@ -411,6 +404,8 @@ p:not([class]):not(:last-child) {
   display: flex;
   flex-direction: column;
   row-gap: 32px;
+  height: max(400px, 46vh);
+  overflow-y: auto;
 }
 
 .popular-right-wrapper {
@@ -461,43 +456,32 @@ p:not([class]):not(:last-child) {
     margin-bottom: 2px;
   }
 
-  .section-heading {
-    column-gap: 6px;
+  .popular-list {
+    height: auto;
   }
 
   .popular {
-    row-gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    column-gap: 20px;
   }
 
-  .popular-content {
-    row-gap: 20px;
-  }
-
-  .popular-right-wrapper {
+  .popular-content, .popular-right-wrapper {
     row-gap: 20px;
   }
 
   .popular-posts-list {
-    column-gap: 20px;
+    flex-direction: column;
+    row-gap: 20px
   }
 
   .popular-posts-link-img {
     margin-bottom: 12px;
   }
 
-  .section-header-date-popular {
-    column-gap: 6px;
-    margin-bottom: 6px;
-  }
-
   .section-title-popular {
     padding-bottom: 4px;
   }
 }
-
-
 
 @media screen and (max-width: 768px) {
   .header {
@@ -578,32 +562,16 @@ p:not([class]):not(:last-child) {
     row-gap: 16px;
   }
 
-  .latest-posts-link-title {
+  .latest-posts-link-title, .popular-posts-link-img {
     margin-bottom: 10px;
   }
 
-  .popular-content {
+  .popular-content, .popular-right-wrapper {
     row-gap: 10px;
   }
 
   .popular-posts-list {
     column-gap: 10px;
-  }
-
-  .popular-posts-link-img {
-    margin-bottom: 6px;
-  }
-
-  .section-header-date-popular {
-    margin-bottom: 4px;
-  }
-
-  .popular-right-wrapper {
-    row-gap: 10px;
-  }
-
-  .popular-list {
-    row-gap: 16px;
   }
 
   .section-title-popular-short {
@@ -670,17 +638,6 @@ p:not([class]):not(:last-child) {
   }
 
   .popular {
-    row-gap: 10px;
+    margin-bottom: 70px;
   }
-
-  .popular-posts-list {
-    column-gap: 4px;
-  }
-
-  .section-header-date-popular {
-    justify-content: space-between;
-    column-gap: 1px;
-  }
-
-
 }
