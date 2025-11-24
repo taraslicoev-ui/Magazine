@@ -513,6 +513,10 @@ p:not([class]):not(:last-child) {
   .jenny-slate-title {
     margin-inline: auto;
   }
+
+  .jenny-slate-text {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -611,6 +615,10 @@ p:not([class]):not(:last-child) {
     margin-left: 20px;
     margin-top: 30px
   }
+
+  .jenny-slate-text {
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -681,6 +689,5 @@ p:not([class]):not(:last-child) {
 
   .jenny-slate-text {
     max-width: 434px;
-    margin-bottom: 20px;
   }
 }
