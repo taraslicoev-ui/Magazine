@@ -246,6 +246,7 @@ p:not([class]):not(:last-child) {
   display: flex;
   justify-content: space-between;
   column-gap: 45px;
+  max-height: 844px;
   padding-bottom: 38px;
   border-bottom: var(--border);
 }
@@ -269,20 +270,47 @@ p:not([class]):not(:last-child) {
   column-gap: 8px;
 }
 
-.jenny-art-actions {
+.art-action-buttons {
   display: flex;
   column-gap: 8px;
 }
 
-.jenny-art-title {
-  max-width: 634px;
+.title-art-title {
+  max-width: 632px;
   padding-bottom: 18px;
   border-bottom: var(--border);
   line-height: 1.1;
   font-size: clamp(24px, 4.01vw, 77px);
 }
 
-.jenny-art-description {
+.jenny-slate-title {
+  max-width: 514px
+}
+
+.section-title {
+  --sectionTitleMaxWidth: 380px;
+  --sectionTitleFontSize: clamp(18px, 1.25vw, 24px);
+  --sectionTitlePaddingBottom: 5px;
+
+  max-width: var(--sectionTitleMaxWidth);
+  font-size: var(--sectionTitleFontSize);
+  padding-bottom: var(--sectionTitlePaddingBottom);
+  border-bottom: var(--border);
+}
+
+.section-title-popular {
+  --sectionTitleMaxWidth: 544px;
+  --sectionTitleFontSize: clamp(20px, 1.92vw, 37px);
+  --sectionTitlePaddingBottom: 8px;
+}
+
+.section-title-latest-posts {
+  --sectionTitleMaxWidth: 764px;
+  --sectionTitleFontSize: clamp(20px, 1.92vw, 37px);
+  --sectionTitlePaddingBottom: 8px;
+}
+
+.art-description {
   font-size: clamp(12px, 1.14vw, 22px);
   max-width: 480px;
 }
@@ -352,33 +380,6 @@ p:not([class]):not(:last-child) {
   margin-bottom: 18px;
 }
 
-.section-title-latest-posts,
-.section-title-latest-posts-short,
-.section-title-popular,
-.section-title-popular-short {
-  border-bottom: var(--border);
-}
-
-.section-title-latest-posts-short, .section-title-popular-short {
-  max-width: 380px;
-  font-size: clamp(18px, 1.25vw, 24px);
-  padding-bottom: 5px;
-}
-
-.section-title-latest-posts, .section-title-popular {
-  max-width: 764px;
-  font-size: clamp(20px, 1.92vw, 37px);
-  padding-bottom: 8px;
-}
-
-.section-title-popular {
-  max-width: 544px;
-}
-
-.section-title-popular-short {
-  max-width: 250px;
-}
-
 .popular {
   display: flex;
   column-gap: 38px;
@@ -421,6 +422,36 @@ p:not([class]):not(:last-child) {
   row-gap: 5px;
 }
 
+.jenny-slate {
+  background: url("./images/jenny-slate/henrik-book.jpg") no-repeat center center / cover;
+}
+
+.jenny-slate-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 616px;
+  min-height: 778px;
+  margin-left: 74px;
+}
+
+.jenny-slate-inner {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  font-weight: 500;
+  max-width: 516px;
+}
+
+.jenny-date {
+  margin-top: 45px;
+}
+
+.jenny-slate-text {
+  max-width: 604px;
+  margin-bottom: 46px;
+}
+
 @media screen and (max-width: 1024px) {
   .header-wrap {
     column-gap: 36px;
@@ -430,7 +461,7 @@ p:not([class]):not(:last-child) {
     margin-bottom: 50px;
   }
 
-  .jenny-art-title {
+  .title-art-title {
     max-width: 700px;
   }
 
@@ -476,10 +507,6 @@ p:not([class]):not(:last-child) {
 
   .popular-posts-link-img {
     margin-bottom: 12px;
-  }
-
-  .section-title-popular {
-    padding-bottom: 4px;
   }
 }
 
@@ -527,13 +554,13 @@ p:not([class]):not(:last-child) {
     row-gap: 20px;
   }
 
-  .jenny-art-title {
+  .title-art-title {
     align-self: center;
     text-align: center;
     padding-bottom: 10px;
   }
 
-  .jenny-art-description {
+  .art-description {
     text-align: center;
     margin-inline: auto;
   }
@@ -568,14 +595,6 @@ p:not([class]):not(:last-child) {
 
   .popular-content, .popular-right-wrapper {
     row-gap: 10px;
-  }
-
-  .popular-posts-list {
-    column-gap: 10px;
-  }
-
-  .section-title-popular-short {
-    max-width: 376px;
   }
 }
 
@@ -614,7 +633,7 @@ p:not([class]):not(:last-child) {
     row-gap: 20px;
   }
 
-  .jenny-art-header, .jenny-art-actions  {
+  .jenny-art-header, .art-action-buttons  {
     column-gap: 10px;
   }
 
