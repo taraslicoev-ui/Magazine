@@ -40,7 +40,7 @@ body {
   padding-inline: var(--container-padding-x);
 }
 
-.button, .button-default, .button-filter  {
+.button, .button-default, .button-filter {
   font-size: 20px;
   font-weight: 500;
   text-transform: uppercase;
@@ -65,7 +65,6 @@ body {
   border: var(--border);
   border-radius: 55px;
 }
-
 
 .button-filter:hover {
   background-color: var(--color-grey);
@@ -275,27 +274,26 @@ p:not([class]):not(:last-child) {
   column-gap: 8px;
 }
 
-.title-art-title {
-  max-width: 632px;
-  padding-bottom: 18px;
-  border-bottom: var(--border);
-  line-height: 1.1;
-  font-size: clamp(24px, 4.01vw, 77px);
-}
-
-.jenny-slate-title {
-  max-width: 514px
-}
-
 .section-title {
   --sectionTitleMaxWidth: 380px;
   --sectionTitleFontSize: clamp(18px, 1.25vw, 24px);
   --sectionTitlePaddingBottom: 5px;
-
   max-width: var(--sectionTitleMaxWidth);
   font-size: var(--sectionTitleFontSize);
   padding-bottom: var(--sectionTitlePaddingBottom);
   border-bottom: var(--border);
+}
+
+.title-art-title {
+  --sectionTitleMaxWidth: 632px;
+  --sectionTitlePaddingBottom: 18px;
+  --sectionTitleFontSize: clamp(24px, 4.01vw, 77px);
+  border-bottom: var(--border);
+  line-height: 1.1;
+}
+
+.jenny-slate-title {
+  --sectionTitleMaxWidth: 514px
 }
 
 .section-title-popular {
@@ -363,7 +361,6 @@ p:not([class]):not(:last-child) {
   padding-bottom: 122px;
   border-bottom: var(--border);
 }
-
 
 .latest-posts-list, .latest-posts-list-short {
   display: flex;
@@ -508,6 +505,14 @@ p:not([class]):not(:last-child) {
   .popular-posts-link-img {
     margin-bottom: 12px;
   }
+
+  .jenny-slate-content {
+    min-height: 389px;
+  }
+
+  .jenny-slate-title {
+    margin-inline: auto;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -596,6 +601,16 @@ p:not([class]):not(:last-child) {
   .popular-content, .popular-right-wrapper {
     row-gap: 10px;
   }
+
+  .jenny-slate-content {
+    min-height: 278px;
+    margin-inline: auto;
+  }
+
+  .jenny-date {
+    margin-left: 20px;
+    margin-top: 30px
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -633,7 +648,7 @@ p:not([class]):not(:last-child) {
     row-gap: 20px;
   }
 
-  .jenny-art-header, .art-action-buttons  {
+  .jenny-art-header, .art-action-buttons {
     column-gap: 10px;
   }
 
@@ -658,5 +673,14 @@ p:not([class]):not(:last-child) {
 
   .popular {
     margin-bottom: 70px;
+  }
+
+  .jenny-date {
+    margin-top: 10px;
+  }
+
+  .jenny-slate-text {
+    max-width: 434px;
+    margin-bottom: 20px;
   }
 }
