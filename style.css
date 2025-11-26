@@ -446,6 +446,7 @@ p:not([class]):not(:last-child) {
 
 .title-hot-stuff {
   margin-bottom: 37px;
+  padding-inline: 94px;
 }
 
 .title-triangle::before {
