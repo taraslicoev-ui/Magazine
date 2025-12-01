@@ -446,7 +446,7 @@ p:not([class]):not(:last-child) {
 
 .title-hot-stuff {
   margin-bottom: 36px;
-/*  padding-inline: 94px;*/
+  /*  padding-inline: 94px;*/
 }
 
 .title-triangle::before {
@@ -659,6 +659,7 @@ p:not([class]):not(:last-child) {
 
   .jenny-slate {
     margin-bottom: 72px;
+    column-gap: 12px;
   }
 
   .jenny-slate-content {
@@ -670,8 +671,7 @@ p:not([class]):not(:last-child) {
   }
 
   .hot-stuff-posts-list {
-    flex-direction: column;
-    row-gap: 16px;
+    column-gap: 6px;
   }
 
   .hot-stuff-posts-img {
@@ -753,6 +753,11 @@ p:not([class]):not(:last-child) {
     margin-bottom: 40px;
   }
 
+  .hot-stuff-posts-list {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
   .jenny-slate {
     margin-bottom: 32px;
   }
@@ -763,5 +768,9 @@ p:not([class]):not(:last-child) {
 
   .jenny-date {
     margin-bottom: 4px;
+  }
+
+  .title-wide {
+    padding-block: 6px;
   }
 }
