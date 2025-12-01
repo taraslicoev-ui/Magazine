@@ -445,8 +445,8 @@ p:not([class]):not(:last-child) {
 }
 
 .title-hot-stuff {
-  margin-bottom: 37px;
-  padding-inline: 94px;
+  margin-bottom: 36px;
+/*  padding-inline: 94px;*/
 }
 
 .title-triangle::before {
@@ -567,6 +567,14 @@ p:not([class]):not(:last-child) {
     text-align: center;
     padding-bottom: 20px;
   }
+
+  .title-hot-stuff {
+    margin-bottom: 16px;
+  }
+
+  .hot-stuff-posts-list {
+    margin-bottom: 62px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -649,12 +657,33 @@ p:not([class]):not(:last-child) {
     row-gap: 10px;
   }
 
+  .jenny-slate {
+    margin-bottom: 72px;
+  }
+
   .jenny-slate-content {
     min-height: 290px;
   }
 
   .jenny-slate-title {
     --sectionTitlePaddingBottom: 0;
+  }
+
+  .hot-stuff-posts-list {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  .hot-stuff-posts-img {
+    margin-bottom: 10px;
+  }
+
+  .section-teg-hot-stuff {
+    margin-bottom: 6px;
+  }
+
+  .title-wide {
+    padding-block: 16px;
   }
 }
 
@@ -722,6 +751,10 @@ p:not([class]):not(:last-child) {
 
   .popular {
     margin-bottom: 40px;
+  }
+
+  .jenny-slate {
+    margin-bottom: 32px;
   }
 
   .jenny-slate-inner {
