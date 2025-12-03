@@ -550,6 +550,10 @@ main.content {
   padding-bottom: 30px;
 }
 
+.footer-feedback-link:hover {
+  color: var(--color-grey);
+}
+
 .footer-socials {
   display: flex;
   justify-content: center;
@@ -581,6 +585,10 @@ main.content {
 
 .footer-socials-feedback {
  text-decoration: underline;
+}
+
+.footer-socials-feedback:hover {
+  color: var(--color-grey);
 }
 
 @media screen and (max-width: 1024px) {
