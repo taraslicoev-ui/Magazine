@@ -487,7 +487,6 @@ p:not([class]):not(:last-child) {
 
 .container-wide {
   border-block: var(--border);
-  margin-bottom: 100px;
 }
 
 .title-wide {
@@ -658,8 +657,12 @@ main.content {
     margin-bottom: 10px;
   }
 
-  .title-wide{
+  .title-wide {
     padding-block: 24px;
+  }
+
+  main.content {
+    margin-bottom: 60px;
   }
 
   .footer-feedback-content {
@@ -783,7 +786,7 @@ main.content {
 
   .footer-feedback-content {
     padding-top: 10px;
-    margin-bottom: 14px;
+    margin-bottom: 20px;
   }
 
   .footer-feedback-list {
@@ -796,11 +799,16 @@ main.content {
   }
 
   .footer-socials-list {
-    column-gap: 30px;}
-}
+    column-gap: 30px;
+  }
 
   .footer-copyright {
     padding: 20px 0 36px;
+  }
+
+  main.content {
+    margin-bottom: 40px;
+  }
 }
 
 @media screen and (max-width: 576px) {
